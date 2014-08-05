@@ -5,6 +5,8 @@
 # or you're stuck!  These comments are here to help you, but please delete them
 # as you go along. You wouldn't normally have such heavily-commented code.
 
+
+
 # Method name: item_counts
 # Input:   An arbitrary array
 #
@@ -22,6 +24,7 @@
 #
 # In short, item_counts(array) tells us how many times each item appears
 # in the input array.
+
 
 def item_counts(items)
   counts = {} # Initialize counts to an empty Hash
@@ -45,5 +48,34 @@ p item_counts([]) == {}
 p item_counts(["hi", "hi", "hi"]) == {"hi" => 3}
 p item_counts([true, nil, "dinosaur"]) == {true => 1, nil => 1, "dinosaur" => 1}
 p item_counts(["a","a","A","A"]) == {"a" => 2, "A" => 2}
+
+
+
+
+# Method name: string_to_characters
+# Input: 		An arbitrary string
+# Returns: 	An array of all the characters in the string including spaces and punctuation
+# Prints: 	Nothing
+
+def string_to_characters(string)
+	# Use split method to convert string into an array of characters
+	characters = string.split('')
+
+	item_counts(characters)
+
+end
+
+
+p string_to_characters("Please split this sentence into an array of characters.")
+p string_to_characters("apple") == {"a" => 1, "p" => 2, "l" => 1, "e" => 1}
+p string_to_characters("123...321") == {"1" => 2, "2" => 2, "3" => 2, "." => 3}
+p string_to_characters("one two three")
+p string_to_characters("This sentence has five words.")
+p string_to_characters("No-spaces-here")
+p string_to_characters("") 
+p string_to_characters(" ") == {" " => 1}
+p string_to_characters("How well  can these words be counted?") 
+p string_to_characters("This sanity check should return false.") 
+p string_to_characters("6 w o r d s")
 
 
