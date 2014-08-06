@@ -52,30 +52,31 @@ p item_counts(["a","a","A","A"]) == {"a" => 2, "A" => 2}
 
 
 
+def count_chars(string)
+  item_counts(string_to_characters(string))
+end
+
+
 # Method name: string_to_characters
-# Input: 		An arbitrary string
-# Returns: 	An array of all the characters in the string including spaces and punctuation
-# Prints: 	Nothing
+# Input:    An arbitrary string
+# Returns:  An array of all the characters in the string including spaces and punctuation
+# Prints:   Nothing
 
 def string_to_characters(string)
-	# Use split method to convert string into an array of characters
-	characters = string.split('')
-
-	item_counts(characters)
-
+  # Use split method to convert string into an array of characters
+  string.split('')
 end
 
 
 p string_to_characters("Please split this sentence into an array of characters.")
-p string_to_characters("apple") == {"a" => 1, "p" => 2, "l" => 1, "e" => 1}
-p string_to_characters("123...321") == {"1" => 2, "2" => 2, "3" => 2, "." => 3}
+p string_to_characters("apple") 
+p string_to_characters("123...321") 
 p string_to_characters("one two three")
 p string_to_characters("This sentence has five words.")
 p string_to_characters("No-spaces-here")
 p string_to_characters("") 
-p string_to_characters(" ") == {" " => 1}
+p string_to_characters(" ") 
 p string_to_characters("How well  can these words be counted?") 
-p string_to_characters("This sanity check should return false.") 
 p string_to_characters("6 w o r d s")
 
 
